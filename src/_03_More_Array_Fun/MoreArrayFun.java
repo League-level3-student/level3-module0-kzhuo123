@@ -11,6 +11,8 @@ public class MoreArrayFun {
 		back(names);
 		System.out.println("");
 		other(names);
+		System.out.println("");
+		random(names);
 	}
 
 	// 2. Write a method that takes an array of Strings and prints all the Strings
@@ -48,9 +50,25 @@ public class MoreArrayFun {
 	// in a completely random order. Almost every run of the program should result
 	// in a different order.
 	public static void random(String[] values) {
+		int random;
+		Random r = new Random();
+		int[] test= new int[values.length];
+		boolean printed = true;
 		for (int i = 0; i < values.length; i++) {
-			System.out.println(values[i]);
+			while (i<values.length) {
+				random=r.nextInt(values.length);
+				if (printed) {
+					
+				}
+				if (!printed) {
+					
+				}
+				
+			}
+	
+		
 		}
+		
 
 	}
 	
