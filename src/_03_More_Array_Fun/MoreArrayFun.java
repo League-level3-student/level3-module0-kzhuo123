@@ -1,5 +1,6 @@
 package _03_More_Array_Fun;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class MoreArrayFun {
@@ -38,8 +39,8 @@ public class MoreArrayFun {
 	// String in the array.
 	public static void other(String[] values) {
 		for (int i = 0; i < values.length; i++) {
-			if (i%2==0) {
-			System.out.println(values[i]);
+			if (i % 2 == 0) {
+				System.out.println(values[i]);
 			}
 		}
 
@@ -52,26 +53,26 @@ public class MoreArrayFun {
 	public static void random(String[] values) {
 		int random;
 		Random r = new Random();
-		int[] test= new int[values.length];
+		ArrayList<Integer> test = new ArrayList<Integer>();
 		boolean printed = true;
+
 		for (int i = 0; i < values.length; i++) {
-			while (i<values.length) {
-				random=r.nextInt(values.length);
-				if (printed) {
-					
+			
+			random = r.nextInt(values.length);
+			
+			for (int j = 0; j < test.size(); j++) {
+				if (random == test.get(i)) {
+					printed = false;
 				}
-				if (!printed) {
-					
-				}
-				
 			}
-	
-		
+
+			if (printed) {
+				System.out.println(values[random]);
+				test.add(random);
+			}
+			
 		}
-		
 
 	}
-	
-	
-	
+
 }
